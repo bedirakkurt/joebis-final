@@ -15,14 +15,14 @@
   </header>
   <main class="container mx-auto mt-4 bg-white p-4 shadow-lg rounded-lg max-w-md">
     <h2 class="text-xl font-semibold mb-4 ">Giriş Yap</h2>
-    <form id="loginForm" class="space-y-4">
+    <form id="loginForm" action="/login" method="get" class="space-y-4">
       <div class="space-y-2">
         <label for="email" class="block text-gray-700">E-posta:</label>
-        <input type="email" id="email" class="w-full border rounded-md py-2 px-3" placeholder="E-postanızı Giriniz">
+        <input type="email" id="OgrMail" class="w-full border rounded-md py-2 px-3" placeholder="E-postanızı Giriniz">
       </div>
       <div class="space-y-2">
         <label for "password" class="block text-gray-700">Şifre:</label>
-        <input type="password" id="password" class="w-full border rounded-md py-2 px-3" placeholder="Şifrenizi Giriniz">
+        <input type="password" id="OgrSifre" class="w-full border rounded-md py-2 px-3" placeholder="Şifrenizi Giriniz">
       </div>
       <div>
         <button type="submit" class="bg-rose-300 text-white rounded-md py-2 px-4 w-full hover:bg-rose-500">Giriş
@@ -34,7 +34,7 @@
       <p>Hesabınız Yok mu? <a href="register.html" class="text-cyan-400">Kayıt Ol</a></p>
     </div>
   </main>
-  <script>
+  <!-- <script>
     const loginForm = document.getElementById("loginForm");
 
     loginForm.addEventListener("submit", (e) => {
@@ -51,7 +51,7 @@
         alert("Giriş başarısız. Lütfen kimlik bilgilerinizi kontrol edin.");
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>

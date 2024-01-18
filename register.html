@@ -15,28 +15,28 @@
   </header>
   <main class="container mx-auto mt-4 bg-white p-4 shadow-lg rounded-lg max-w-md">
     <h2 class="text-xl font-semibold mb-4">Kayıt Ol</h2>
-    <form id="registerForm" class="space-y-4">
+    <form action="/register" method="post" id="registerForm" class="space-y-4">
       <div class="space-y-2">
-        <label for="newName" class="block text-gray-700">Adınız:</label>
-        <input type="text" id="newName" class="w-full border rounded-md py-2 px-3" placeholder="Adınızı girin">
+        <label for="OgrAd" class="block text-gray-700">Adınız:</label>
+        <input type="text" id="OgrAd" name="OgrAd" class="w-full border rounded-md py-2 px-3" placeholder="Adınızı girin">
       </div>
       <div class="space-y-2">
-        <label for="newSurname" class="block text-gray-700">Soyadınız:</label>
-        <input type="text" id="newSurname" class="w-full border rounded-md py-2 px-3" placeholder="Soyadınızı girin">
+        <label for="OgrSoyad" class="block text-gray-700">Soyadınız:</label>
+        <input type="text" name="OgrSoyad" id="OgrSoyad" class="w-full border rounded-md py-2 px-3" placeholder="Soyadınızı girin">
       </div>
       <div class="space-y-2">
-        <label for="newEmail" class="block text-gray-700">E-posta:</label>
-        <input type="email" id="newEmail" class="w-full border rounded-md py-2 px-3"
+        <label for="OgrMail" class="block text-gray-700">E-posta:</label>
+        <input type="email" name="OgrMail" id="OgrMail" class="w-full border rounded-md py-2 px-3"
           placeholder="Öğrenci e-postanızı girin">
       </div>
       <div class="space-y-2">
-        <label for="newPassword" class="block text-gray-700">Şifre:</label>
-        <input type="password" id="newPassword" class="w-full border rounded-md py-2 px-3"
+        <label for="OgrSifre" class="block text-gray-700">Şifre:</label>
+        <input type="password" name="OgrSifre" id="OgrSifre" class="w-full border rounded-md py-2 px-3"
           placeholder="Şifrenizi girin">
       </div>
       <div class="space-y-2">
-        <label for="newPhoneNumber" class="block text-gray-700">Telefon Numaranız:</label>
-        <input type="text" id="newPhoneNumber" class="w-full border rounded-md py-2 px-3"
+        <label for="OgrTel" class="block text-gray-700">Telefon Numaranız:</label>
+        <input type="text" id="OgrTel" name="OgrTel" class="w-full border rounded-md py-2 px-3"
           placeholder="Telefon numaranızı girin">
       </div>
       <div>
@@ -46,54 +46,9 @@
     </form>
   </main>
 
-  <!-- Supabase JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" ></script>
-  <script type="module">
-    import createClient from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
-    const supabaseUrl = 'https://fzdvzcfzfjohhdrtloyd.supabase.co/';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZHZ6Y2Z6ZmpvaGhkcnRsb3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU1ODY2OTQsImV4cCI6MjAyMTE2MjY5NH0.c2r4nUFUrmIMnUZ9QxQmW33eEeXGQU0tdbbXmWn4xhs';
-    const supabase = createClient(supabaseUrl, supabaseKey);
-    
-    console.log("Supabase bağlantısı başarılı");
-
-    document.addEventListener("DOMContentLoaded", function () {
-  const registerForm = document.getElementById("registerForm");
-
-  if (registerForm) {
-    console.log("Kayıt formu bulundu");
-
-    registerForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-        const newName = document.getElementById("newName").value;
-        const newSurname = document.getElementById("newSurname").value;
-        const newEmail = document.getElementById("newEmail").value;
-        const newPassword = document.getElementById("newPassword").value;
-        const newPhoneNumber = document.getElementById("newPhoneNumber").value;
-
-        const { error } = await supabase.from('Ogrenciler').insert([
-          {
-            OgrAd: newName,
-            OgrSoyad: newSurname,
-            email: newEmail,
-            OgrSifre: newPassword,
-            OgrTel: newPhoneNumber,
-          }
-        ]);
-          
-        if (error) {
-          alert("Kayit Basarisiz: " + error.message);
-        } else {
-          alert("Kayıt başarılı!");
-        }
-      });
-    }else {
-    console.error("Kayıt formu bulunamadı. ID 'registerForm' kontrol ediniz.");
-  }
-});
-
-  </script>
-
+ supbase registirform ogrenciler table 
+ <script></script>
+  
 
 </body>
 
