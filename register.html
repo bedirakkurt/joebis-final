@@ -45,31 +45,56 @@
       </div>
     </form>
   </main>
-  <script src="https://unpkg.com/@supabase/supabase-js@2"> 
 
-    import { createClient } from '@supabase/supabase-js'
-    const supabase = createClient('https://fzdvzcfzfjohhdrtloyd.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZHZ6Y2Z6ZmpvaGhkcnRsb3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU1ODY2OTQsImV4cCI6MjAyMTE2MjY5NH0.c2r4nUFUrmIMnUZ9QxQmW33eEeXGQU0tdbbXmWn4xhs')
-    const registerForm = document.getElementById("registerForm");
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" ></script>
+  <script type="module">
+    import createClient from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+    const supabaseUrl = 'https://fzdvzcfzfjohhdrtloyd.supabase.co/';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6ZHZ6Y2Z6ZmpvaGhkcnRsb3lkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDU1ODY2OTQsImV4cCI6MjAyMTE2MjY5NH0.c2r4nUFUrmIMnUZ9QxQmW33eEeXGQU0tdbbXmWn4xhs';
+    const supabase = createClient(supabaseUrl, supabaseKey);
+    
+    console.log("Supabase bağlantısı başarılı");
 
-    registerForm.addEventListener("submit", (e) => {
+    document.addEventListener("DOMContentLoaded", function () {
+  const registerForm = document.getElementById("registerForm");
+
+  if (registerForm) {
+    console.log("Kayıt formu bulundu");
+
+    registerForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const newName = document.getElementById("newName").value;
-      const newSurname = document.getElementById("newSurname").value;
-      const newEmail = document.getElementById("newEmail").value;
-      const newPassword = document.getElementById("newPassword").value;
-      const newPhoneNumber = document.getElementById("newPhoneNumber").value;
+        const newName = document.getElementById("newName").value;
+        const newSurname = document.getElementById("newSurname").value;
+        const newEmail = document.getElementById("newEmail").value;
+        const newPassword = document.getElementById("newPassword").value;
+        const newPhoneNumber = document.getElementById("newPhoneNumber").value;
 
-      (async () => {
-        const { error } = await supabase
-      })().from('Ogrenciler').insert({ OgrAd: newName }).insert({  OgrSoyad: newSurname }).insert({ email: newEmail }).insert({ OgrSifre: newPassword }).insert({ OgrTel: newPhoneNumber }).insert({ id:1 })
+        const { error } = await supabase.from('Ogrenciler').insert([
+          {
+            OgrAd: newName,
+            OgrSoyad: newSurname,
+            email: newEmail,
+            OgrSifre: newPassword,
+            OgrTel: newPhoneNumber,
+          }
+        ]);
+          
+        if (error) {
+          alert("Kayit Basarisiz: " + error.message);
+        } else {
+          alert("Kayıt başarılı!");
+        }
+      });
+    }else {
+    console.error("Kayıt formu bulunamadı. ID 'registerForm' kontrol ediniz.");
+  }
+});
 
-
-      alert("Kayıt başarılı!");
-    });
   </script>
-  
-  
+
+
 </body>
 
 </html>
