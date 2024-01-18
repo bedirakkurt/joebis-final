@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JoeBis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/tailwind.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body class="">
+  <!-- Tüm düzen için konteyner -->
+  <div class="flex min-h-screen">
+    <!-- Tam yükseklikte uzanan gezinme çekmecesi -->
+    <div class="w-60  border-r min-h-screen shadow-md bg-rose-300">
+      <div class="px-4 py-6">
+        <a>
+          <h1 class="text-2xl font-bold mb-6 hover:text-cyan-400">
+            <a href="dashboard.html">JoeBis</a>
+          </h1>
+          <nav class="flex flex-col space-y-4">
+            <button onclick="navigateTo('student-info')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Öğrenci Bilgileri</button>
+            <button onclick="navigateTo('syllabus')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Ders Programı</button>
+            <button onclick="navigateTo('exam-dates')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Sınav Tarihleri</button>
+            <button onclick="navigateTo('grades')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Notlar</button>
+          </nav>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="flex-1">
+      <div class="px-4 py-6">
+        <!-- Her sayfa için bölümler -->
+        <div id="student-info" class="page">
+          <h1 class="text-4xl font-bold mb-6">Öğrenci Bilgileri</h1>
+          <!-- Öğrenci bilgileri için içerik -->
+          <div class="p-6">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex items-center p-4">
+              <div class="flex-shrink-0">
+                <img class="h-24 w-24 rounded-full" src="path-to-student-image.jpg" alt="Öğrenci Profil Resmi">
+              </div>
+              <div class="ml-4">
+                <h2 class="text-lg font-semibold">Jane Doe</h2>
+                <p class="text-gray-600">Bilgisayar Bilimi, İkinci Sınıf</p>
+                <p class="text-gray-600">Öğrenci Numarası: 123456789</p>
+                <p class="text-gray-600">E-posta: janedoe@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Ders Programı Bölümü -->
+    <div id="syllabus" class="page hidden">
+      <h1 class="text-4xl font-bold mb-6">Ders Programı</h1>
+      <!-- Ders programı içeriği -->
+      <div class="p-6 bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Ders programı içeriği buraya eklenecek -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                <th class="py-3 px-6">Saat</th>
+                <th class="py-3 px-6">Pazartesi</th>
+                <th class="py-3 px-6">Salı</th>
+                <th class="py-3 px-6">Çarşamba</th>
+                <th class="py-3 px-6">Perşembe</th>
+                <th class="py-3 px-6">Cuma</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <tr class="bg-white border-b">
+                <td class="py-4 px-6">08:10 - 08:50</td>
+                <td class="py-4 px-6">İş İngilizcesi I</td>
+                <td class="py-4 px-6">Ağ Temelleri</td>
+                <td class="py-4 px-6">Mobil Programlama I</td>
+                <td class="py-4 px-6">Mesleki Uygulama ve Proje I</td>
+                <td class="py-4 px-6">Arduino İle Kodlamaya Giriş I</td>
+              </tr>
+              <tr class="bg-gray-50 border-b">
+                <td class="py-4 px-6">09:00 - 9:40</td>
+                <td class="py-4 px-6">İş İngilizcesi I</td>
+                <td class="py-4 px-6">Ağ Temelleri</td>
+                <td class="py-4 px-6">Mobil Programlama I</td>
+                <td class="py-4 px-6">Mesleki Uygulama ve Proje I</td>
+                <td class="py-4 px-6">Arduino İle Kodlamaya Giriş I</td>
+              </tr>
+              
+              <tr class="bg-white border-b">
+                <td class="py-4 px-6">09:50 - 10.30</td>
+                <td class="py-4 px-6">İnternet Programcılığı I</td>
+                <td class="py-4 px-6">Veritabanı II</td>
+                <td class="py-4 px-6"></td>
+                <td class="py-4 px-6">Mesleki Uygulama ve Proje I</td>
+                <td class="py-4 px-6"></td>
+              </tr>
+              <tr class="bg-gray-50 border-b">
+                <td class="py-4 px-6">10:40 - 11:20</td>
+                <td class="py-4 px-6">İnternet Programcılığı I</td>
+                <td class="py-4 px-6">Veritabanı II</td>
+                <td class="py-4 px-6"></td>
+                <td class="py-4 px-6">İcerik Yönetim Sistemi I</td>
+                <td class="py-4 px-6"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Sınav Tarihleri Bölümü -->
+    <div id="exam-dates" class="page hidden">
+      <h1 class="text-4xl font-bold mb-6">Sınav Tarihleri</h1>
+      <!-- Content for exam dates -->
+      <div class="p-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4 font-semibold">Tarih</div>
+            <div class="w-1/4 font-semibold">Saat</div>
+            <div class="w-2/4 pl-2 font-semibold">Ders</div>
+          </div>
+          <!-- Exam Dates for Mathematics -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-10</div>
+            <div class="w-1/4">10:00 AM</div>
+            <div class="w-2/4 pl-2">İnternet Programcılığı I</div>
+          </div>
+          <!-- Exam Dates for Physics -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-12</div>
+            <div class="w-1/4">09:30 AM</div>
+            <div class="w-2/4 pl-2">Ağ Temelleri</div>
+          </div>
+          <!-- Exam Dates for Chemistry -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-15</div>
+            <div class="w-1/4">02:45 PM</div>
+            <div class="w-2/4 pl-2">İş İngilizcesi I</div>
+          </div>
+          <!-- Exam Dates for Biology -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-18</div>
+            <div class="w-1/4">11:15 AM</div>
+            <div class="w-2/4 pl-2">Veritabanı II</div>
+          </div>
+          <!-- Exam Dates for History -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-20</div>
+            <div class="w-1/4">03:30 PM</div>
+            <div class="w-2/4 pl-2">Mobil Programlama I</div>
+          </div>
+          <!-- Exam Dates for Literature -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-22</div>
+            <div class="w-1/4">01:45 PM</div>
+            <div class="w-2/4 pl-2">Mesleki Uygulama ve Proje I</div>
+          </div>
+          <!-- Exam Dates for Art -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-24</div>
+            <div class="w-1/4">09:00 AM</div>
+            <div class="w-2/4 pl-2">İçerik Yönetim Sistemi I</div>
+          </div>
+          <!-- Exam Dates for Music -->
+          <div class="flex items-center border-b py-3">
+            <div class="w-1/4">2023-12-27</div>
+            <div class="w-1/4">10:45 AM</div>
+            <div class="w-2/4 pl-2">Arduino İle Kodlamaya Giriş</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Notlar Bölümü -->
+    <div id="grades" class="page hidden">
+      <h1 class="text-4xl font-bold mb-6">Notlar</h1>
+      <!-- Notlar için içerik -->
+      <div class="p-6 bg-white rounded-lg shadow-lg overflow-hidden">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+            <tr>
+              <th class="py-3 px-6">Ders</th>
+              <th class="py-3 px-6">Vize</th>
+              <th class="py-3 px-6">Final</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b">
+              <td class="py-4 px-6">İş İngilizcesi I</td>
+              <td class="py-4 px-6" id="mathGrade">60</td>
+              <td class="py-4 px-6" id="mathGrade">70</td>
+            </tr>
+            <tr class="bg-gray-50 border-b">
+              <td class="py-4 px-6">İnternet Programcılığı I</td>
+              <td class="py-4 px-6" id="physicsGrade">73</td>
+              <td class="py-4 px-6" id="physicsGrade">79</td>
+            </tr>
+            
+            <tr class="bg-white border-b">
+              <td class="py-4 px-6">Ağ Temelleri</td>
+              <td class="py-4 px-6" id="physicsGrade">85</td>
+              <td class="py-4 px-6" id="physicsGrade">75</td>
+            </tr>
+            <tr class="bg-gray-50 border-b">
+              <td class="py-4 px-6">Mobil Programlama</td>
+              <td class="py-4 px-6" id="physicsGrade">55</td>
+              <td class="py-4 px-6" id="physicsGrade">56</td>
+            </tr>
+            <tr class="bg-white border-b">
+              <td class="py-4 px-6">Mesleki Uygulama ve Proje</td>
+              <td class="py-4 px-6" id="physicsGrade">64</td>
+              <td class="py-4 px-6" id="physicsGrade">92</td>
+            </tr>
+            <tr class="bg-gray-50 border-b">
+              <td class="py-4 px-6">İçerik Yönetim Sistemi</td>
+              <td class="py-4 px-6" id="physicsGrade">71.5</td>
+              <td class="py-4 px-6" id="physicsGrade">79</td>
+            </tr>
+            <tr class="bg-white border-b">
+              <td class="py-4 px-6">Arduino ile Programlama Giriş</td>
+              <td class="py-4 px-6" id="physicsGrade">99</td>
+              <td class="py-4 px-6" id="physicsGrade">79</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bildirim Panosu -->
+    <div class="w-1/4 p-6 bg-rose-300  right-0 top-0 h-screen h-full overflow-y-auto">
+      <h2 class="text-xl font-semibold mb-4">Bildirim Panosu</h2>
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="text-sm text-gray-700">
+          <p class="mb-2"><strong>Önemli Duyuru</strong></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, velit eget tincidunt gravida.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="text-sm text-gray-700">
+          <p class="mb-2"><strong>Hatırlatma: Ödev Teslim Tarihi</strong></p>
+          <p>Unutmayın ki "Matematik" dersinin ödevi 15 Aralık 2023 tarihine kadar teslim edilmelidir.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      function navigateTo(page) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.add("hidden"));
+        document.getElementById(page).classList.remove("hidden");
+      }
+      function exitApp() {
+        alert("Exiting the application");
+        window.location.href = "index.html";
+      }
+    </script>
+    </script>
+</body>
+
+</html>

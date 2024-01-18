@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
+  <title>Giriş - JoeBis</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body class="bg-gray-100 p-4">
+  <header class="container mx-auto mt-4 bg-white p-4 shadow-lg rounded-lg max-w-md text-gray-700">
+    <h1 class="text-2xl font-semibold text-center">JoeBis'e Hoşgeldiniz!</h1>
+  </header>
+  <main class="container mx-auto mt-4 bg-white p-4 shadow-lg rounded-lg max-w-md">
+    <h2 class="text-xl font-semibold mb-4 ">Giriş Yap</h2>
+    <form id="loginForm" class="space-y-4">
+      <div class="space-y-2">
+        <label for="email" class="block text-gray-700">E-posta:</label>
+        <input type="email" id="email" class="w-full border rounded-md py-2 px-3" placeholder="E-postanızı Giriniz">
+      </div>
+      <div class="space-y-2">
+        <label for "password" class="block text-gray-700">Şifre:</label>
+        <input type="password" id="password" class="w-full border rounded-md py-2 px-3" placeholder="Şifrenizi Giriniz">
+      </div>
+      <div>
+        <button type="submit" class="bg-rose-300 text-white rounded-md py-2 px-4 w-full hover:bg-rose-500">Giriş
+          Yap</button>
+      </div>
+    </form>
+
+    <div class="mt-4 text-center">
+      <p>Hesabınız Yok mu? <a href="register.html" class="text-cyan-400">Kayıt Ol</a></p>
+    </div>
+  </main>
+  <script>
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+
+      if (email === "kullanici@example.com" && password === "sifre") {
+        alert("Giriş başarılı!");
+
+      } else {
+        alert("Giriş başarısız. Lütfen kimlik bilgilerinizi kontrol edin.");
+      }
+    });
+  </script>
+</body>
+
+</html>

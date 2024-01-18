@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JoeBis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/tailwind.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <!-- Container for the entire layout -->
+  <div class="flex min-h-screen">
+    <!-- Navigation Drawer that extends full height -->
+    <div class="w-60  border-r min-h-screen  shadow-md bg-pink-300">
+      <div class="px-4 py-6">
+        <a>
+          <h1 class="text-2xl font-bold mb-6 hover:text-cyan-400">
+            <a href="index.html">JoeBis</a>
+          </h1>
+          <nav class="flex flex-col space-y-4">
+            <button onclick="navigateTo('student-info')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Student Information</button>
+            <button onclick="navigateTo('syllabus')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Syllabus</button>
+            <button onclick="navigateTo('exam-dates')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Exam Dates</button>
+            <button onclick="navigateTo('grades')"
+              class="text-left w-full text-gray-700 font-semibold hover:text-cyan-400">Grades</button>
+          </nav>
+        </a>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="flex-1 ">
+      <div class="px-4 py-6">
+        <!-- Sections for each page -->
+        <div id="student-info" class="page">
+          <h1 class="text-4xl font-bold mb-6">Student Information</h1>
+          <!-- Content for student information -->
+          <div class="p-6">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex items-center p-4">
+              <div class="flex-shrink-0">
+                <img class="h-24 w-24 rounded-full" src="path-to-student-image.jpg" alt="Student's Profile Picture">
+              </div>
+              <div class="ml-4">
+                <h2 class="text-lg font-semibold">Jane Doe</h2>
+                <p class="text-gray-600">Computer Science, Sophomore</p>
+                <p class="text-gray-600">Student ID: 123456789</p>
+                <p class="text-gray-600">Email: janedoe@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Syllabus Section -->
+        <div id="syllabus" class="page hidden">
+          <h1 class="text-4xl font-bold mb-6">Syllabus</h1>
+          <!-- Content for syllabus -->
+          <div class="p-6 bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Syllabus content here -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                  <tr>
+                    <th class="py-3 px-6">Time</th>
+                    <th class="py-3 px-6">Monday</th>
+                    <th class="py-3 px-6">Tuesday</th>
+                    <th class="py-3 px-6">Wednesday</th>
+                    <th class="py-3 px-6">Thursday</th>
+                    <th class="py-3 px-6">Friday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6">08:10 - 08:50</td>
+                    <td class="py-4 px-6">Mathematics</td>
+                    <td class="py-4 px-6">Physics</td>
+                    <td class="py-4 px-6">Chemistry</td>
+                    <td class="py-4 px-6">Biology</td>
+                    <td class="py-4 px-6">History</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                    <td class="py-4 px-6">09:00 - 9:40</td>
+                    <td class="py-4 px-6">Literature</td>
+                    <td class="py-4 px-6">Art</td>
+                    <td class="py-4 px-6">Music</td>
+                    <td class="py-4 px-6">Physical Education</td>
+                    <td class="py-4 px-6">Computer Science</td>
+                  </tr>
+                  <!-- Additional rows can be added for more time slots and subjects -->
+                  <tr class="bg-white border-b">
+                    <td class="py-4 px-6">09:50 - 10.30</td>
+                    <td class="py-4 px-6">Mathematics</td>
+                    <td class="py-4 px-6">Physics</td>
+                    <td class="py-4 px-6">Chemistry</td>
+                    <td class="py-4 px-6">Biology</td>
+                    <td class="py-4 px-6">History</td>
+                  </tr>
+                  <tr class="bg-gray-50 border-b">
+                    <td class="py-4 px-6">10:40 - 11:20</td>
+                    <td class="py-4 px-6">Literature</td>
+                    <td class="py-4 px-6">Art</td>
+                    <td class="py-4 px-6">Music</td>
+                    <td class="py-4 px-6">Physical Education</td>
+                    <td class="py-4 px-6">Computer Science</td>
+                  </tr>
+                  <!-- You can continue repeating subjects as needed -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Exam Dates Section -->
+        <div id="exam-dates" class="page hidden">
+          <h1 class="text-4xl font-bold mb-6">Exam Dates</h1>
+          <!-- Content for exam dates -->
+          <div class="p-6">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden p-4">
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4 font-semibold">Date</div>
+                <div class="w-1/4 font-semibold">Time</div>
+                <div class="w-2/4 pl-2 font-semibold">Subject</div>
+              </div>
+              <!-- Exam Dates for Mathematics -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-10</div>
+                <div class="w-1/4">10:00 AM</div>
+                <div class="w-2/4 pl-2">Mathematics</div>
+              </div>
+              <!-- Exam Dates for Physics -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-12</div>
+                <div class="w-1/4">09:30 AM</div>
+                <div class="w-2/4 pl-2">Physics</div>
+              </div>
+              <!-- Exam Dates for Chemistry -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-15</div>
+                <div class="w-1/4">02:45 PM</div>
+                <div class="w-2/4 pl-2">Chemistry</div>
+              </div>
+              <!-- Exam Dates for Biology -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-18</div>
+                <div class="w-1/4">11:15 AM</div>
+                <div class="w-2/4 pl-2">Biology</div>
+              </div>
+              <!-- Exam Dates for History -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-20</div>
+                <div class="w-1/4">03:30 PM</div>
+                <div class="w-2/4 pl-2">History</div>
+              </div>
+              <!-- Exam Dates for Literature -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-22</div>
+                <div class="w-1/4">01:45 PM</div>
+                <div class="w-2/4 pl-2">Literature</div>
+              </div>
+              <!-- Exam Dates for Art -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-24</div>
+                <div class="w-1/4">09:00 AM</div>
+                <div class="w-2/4 pl-2">Art</div>
+              </div>
+              <!-- Exam Dates for Music -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-27</div>
+                <div class="w-1/4">10:45 AM</div>
+                <div class="w-2/4 pl-2">Music</div>
+              </div>
+              <!-- Exam Dates for Physical Education -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-29</div>
+                <div class="w-1/4">08:30 AM</div>
+                <div class="w-2/4 pl-2">Physical Education</div>
+              </div>
+              <!-- Exam Dates for Computer Science -->
+              <div class="flex items-center border-b py-3">
+                <div class="w-1/4">2023-12-31</div>
+                <div class="w-1/4">02:00 PM</div>
+                <div class="w-2/4 pl-2">Computer Science</div>
+              </div>
+              <!-- You can add more exam dates for other subjects -->
+            </div>
+          </div>
+        </div>
+
+
+
+        <div id="grades" class="page hidden">
+          <h1 class="text-4xl font-bold mb-6">Grades</h1>
+          <!-- Content for grades -->
+          <div class="p-6 bg-white rounded-lg shadow-lg overflow-hidden">
+            <table class="w-full text-sm text-left text-gray-500">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                  <th class="py-3 px-6">Subject</th>
+                  <th class="py-3 px-6">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <td class="py-4 px-6">Mathematics</td>
+                  <td class="py-4 px-6" id="mathGrade">A</td>
+                </tr>
+                <tr class="bg-gray-50 border-b">
+                  <td class="py-4 px-6">Physics</td>
+                  <td class="py-4 px-6" id="physicsGrade">B+</td>
+                </tr>
+                <!-- Add more subjects and their corresponding grades here -->
+                <tr class="bg-white border-b">
+                  <td class="py-4 px-6">Chemistry</td>
+                  <td class="py-4 px-6" id="chemistryGrade">A-</td>
+                </tr>
+                <tr class="bg-gray-50 border-b">
+                  <td class="py-4 px-6">Biology</td>
+                  <td class="py-4 px-6" id="biologyGrade">B</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="py-4 px-6">History</td>
+                  <td class="py-4 px-6" id="historyGrade">C+</td>
+                </tr>
+                <tr class="bg-gray-50 border-b">
+                  <td class="py-4 px-6">Literature</td>
+                  <td class="py-4 px-6" id="literatureGrade">C</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="py-4 px-6">Art</td>
+                  <td class="py-4 px-6" id="artGrade">C-</td>
+                </tr>
+                <tr class="bg-gray-50 border-b">
+                  <td class="py-4 px-6">Music</td>
+                  <td class="py-4 px-6" id="musicGrade">D+</td>
+                </tr>
+                <tr class="bg-white border-b">
+                  <td class="py-4 px-6">Physical Education</td>
+                  <td class="py-4 px-6" id="peGrade">D</td>
+                </tr>
+                <tr class="bg-gray-50 border-b">
+                  <td class="py-4 px-6">Computer Science</td>
+                  <td class="py-4 px-6" id="csGrade">F</td>
+                </tr>
+                <!-- Additional rows for other subjects and their grades can be added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <!-- Add more rows for other subjects and grades -->
+        </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- Notification Board -->
+    <div class="w-1/4 p-6 bg-[#fce7f3]  right-0 top-0 h-screen h-full overflow-y-auto">
+      <h2 class="text-xl font-semibold mb-4">Notification Board</h2>
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="text-sm text-gray-700">
+          <p class="mb-2"><strong>Important Announcement</strong></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, velit eget tincidunt gravida.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+        <div class="text-sm text-gray-700">
+          <p class="mb-2"><strong>Reminder: Assignment Due Date</strong></p>
+          <p>Don't forget that the assignment for "Mathematics" is due on December 15, 2023.</p>
+        </div>
+      </div>
+      <!-- You can add more notifications here -->
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+  <script>
+    function navigateTo(page) {
+      document
+        .querySelectorAll(".page")
+        .forEach((p) => p.classList.add("hidden"));
+      document.getElementById(page).classList.remove("hidden");
+    }
+  </script>
+</body>
+
+</html>

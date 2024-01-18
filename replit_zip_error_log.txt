@@ -1,0 +1,8 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/cssesc","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/jiti","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/nanoid","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/resolve","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/sucrase","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/sucrase-node","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/tailwind","time":"2023-11-27T07:13:50Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/tailwindcss","time":"2023-11-27T07:13:50Z"}
